@@ -5,9 +5,9 @@ const connectToDatabase = require("./src/database/mongoose.database");
 
 dotenv.config();
 
-connectToDatabase();
-
 const app = express();
+
+connectToDatabase();
 
 app.get("/tasks", (req, res) => {
   const tasks = [

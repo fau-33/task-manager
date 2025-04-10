@@ -3,12 +3,11 @@ const mongoose = require("mongoose");
 const connectToDatabase = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@fsctaskmanagercluster.fckgujj.mongodb.net/task-manager?retryWrites=true&w=majority&appName=FscTaskManagerCluster`
+      `mongodb+srv://user2025:test234@fsctaskmanagercluster.fckgujj.mongodb.net/?retryWrites=true&w=majority&appName=FscTaskManagerCluster`
     );
-    console.log("Connected to database mongodb");
+    console.log("Conectado ao MongoDB!");
   } catch (error) {
-    console.error("Error connecting to MongoDB:", error);
-    throw error; // Propaga o erro para ser tratado no `startServer`
+    console.error("Erro ao conectar ao MongoDB:", error);
   }
 };
 
